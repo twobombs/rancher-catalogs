@@ -1,0 +1,7 @@
+openssh:
+  image: twobombs/openssh:latest
+  hostname: "${NAME}"
+  restart: always
+  stdin_open: true
+  ports:
+    - 22

@@ -1,0 +1,24 @@
+.catalog:
+  name: openssh
+  version: v0.1.0
+  description: OpenSSH
+  uuid: # Unique identifier to be used for upgrades. Please see note.
+  minimum_rancher_version: v1.0.0
+  questions:
+    - variable: "NAME"
+      label: "Hostname"
+      description: ".domain.tld"
+      required: true
+      type: "string"
+
+openssh:
+ tty: true
+ image: twobombs/openssh:latest
+ health_check:
+    port: 22
+    interval: 20000
+    initializing_timeout: 120000
+    unhealthy_threshold: 6
+    strategy: none
+    healthy_threshold: 2
+    response_timeout: 2000

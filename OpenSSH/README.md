@@ -1,0 +1,1 @@
+Rancher template for OpenSSH@w2k16
